@@ -163,6 +163,7 @@ setup.kibana:
   # In case you specify and additional path, the scheme is required: http://localhost:5601/path
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
   host: "https://10.0.2.31:5601"
+  ssl.verification_mode: none
 
   # Kibana Space ID
   # ID of the Kibana Space into which the dashboards should be loaded. By default,
@@ -190,9 +191,10 @@ setup.kibana:
 output.elasticsearch:
   # Array of hosts to connect to.
   hosts: ["https://10.0.2.31:9200"]
+  ssl.verification_mode: none
 
   # Protocol - either `http` (default) or `https`.
-  #protocol: "https"
+  protocol: "https"
 
   # Authentication credentials - either API key or username/password.
   #api_key: "id:api_key"
